@@ -53,7 +53,6 @@
     </nav>
     <div class="container my-4">
         <h2 class="text-center">TODOs List</h2>
-        <form>
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
@@ -63,8 +62,8 @@
             <label for="description" class="form-label">Description</label>
             <textarea name="description" id="description" class="form-control" cols="30" rows="5"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Add</button>
-    </form>
+        <button id="add" class="btn btn-primary">Add</button>
+        <button id="clear" class="btn btn-primary" onclick="clearList()">Clear</button>
     <div id="items" class="my-4">
         <h2>Your tasks</h2>
         <table class="table">
@@ -76,7 +75,7 @@
                 <th scope="col">Actions</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="tableBody">
                 <tr>
                     <th scope="row">1</th>
                     <td>Mark</td>
@@ -87,6 +86,7 @@
           </table>
     </div>
     </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
